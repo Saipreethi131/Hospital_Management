@@ -7,28 +7,25 @@ const patientschema =new Schema({
         unique:true
     },
     age:{
-        type:Number,
-        required:true
+        type:Number
     },
     medicalhistory:[
         {
             category:{
                 type:String,
                 enum:["disease","allergy","surgery","medication"],
-                required:true
+                
             },
             condition:{
-                type:String,
-                required:true
+                type:String
+                
             },
             diagnoseddate:{
-                type:Date,
-                required:true
+                type:Date
             },
             status:{
                 type:String,
-                enum:["ongoing","recovered"],
-                required:true
+                enum:["ongoing","recovered"]
             },
             notes:{
                 type:String

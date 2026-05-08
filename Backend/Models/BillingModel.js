@@ -1,4 +1,4 @@
-import {schema,model} from "mongoose"
+import {Schema,model} from "mongoose"
 const billingschema =new Schema({
     appointmentid:{
         type:Schema.Types.ObjectId,
@@ -17,7 +17,7 @@ const billingschema =new Schema({
     },
     paymentmethod:{
         type:String,
-        enum:["cash","UPI","card"]
+        enum:["CASH","UPI","CARD"]
     }
 },{
     timestamps:true,

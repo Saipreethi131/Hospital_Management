@@ -1,6 +1,6 @@
 import {Schema,model} from "mongoose"
 const doctorschema=new Schema({
-    userid:{
+    doctorid:{
         type:Schema.Types.ObjectId,
         ref:"User",
         required:[true,"User Id is required"],
@@ -8,27 +8,25 @@ const doctorschema=new Schema({
     },
     specialization:{
         type:String,
-        required:true
+        default:""
     },
     experience:{
         type:Number,
-        required:true
+        default:0
     },
     fees:{
         type:Number,
-        required:true
+        default:0
     },
     availability:[
         {
             day:{
                 type:String,
                 enum:["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-                required:true
             },
             slots:[
                 {
-                    type:String,
-                    required:true
+                    type:String
             }
         ]
     }

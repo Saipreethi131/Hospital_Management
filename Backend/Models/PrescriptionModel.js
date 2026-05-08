@@ -6,9 +6,23 @@ const prescriptionschema =new Schema ({
         required:true,
         unique:true
     },
+    doctorid:{
+            type:Schema.Types.ObjectId,
+            ref:"Doctor",
+            required:true
+    },    
+    patientid:{
+            type:Schema.Types.ObjectId,
+            ref:"Patient",
+            required:true
+    },
+    diagnosis:{
+        type:String,
+        required:true
+    },
     medicines:[
         {
-            name:{
+            medicinename:{
                 type:String,
                 required:true
             },
